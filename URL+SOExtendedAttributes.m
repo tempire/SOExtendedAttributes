@@ -1,6 +1,6 @@
 
 /*
- NSURL+SOExtendedAttributes
+ URL+SOExtendedAttributes
  
  Copyright 2012-2014 Standard Orbit Software, LLC. All rights reserved.
  License at the bottom of the file.
@@ -11,7 +11,7 @@
 #endif
 
 #import <Foundation/Foundation.h>
-#import "NSURL+SOExtendedAttributes.h"
+#import "RL+SOExtendedAttributes.h"
 #import <sys/xattr.h>
 #include <unistd.h>
 
@@ -25,7 +25,7 @@ NSString * const SOExtendedAttributeNameKey = @"SOExtendedAttributeName";
 static int xattrDefaultOptions = XATTR_NOFOLLOW | XATTR_SHOWCOMPRESSION;
 
 /* Make an NSError from the global errno and optionally the url */
-static inline NSError *SOPOSIXErrorForURL(NSURL *url)
+static inline NSError *SOPOSIXErrorForURL(URL *url)
 {
     int posixErr = errno;
     NSString *errDesc;
@@ -50,13 +50,13 @@ static inline NSError *SOPOSIXErrorForURL(NSURL *url)
     [errInfo setObject:errDesc forKey:NSLocalizedDescriptionKey];
     
     if (url) {
-        [errInfo setObject:url forKey:NSURLErrorKey];
+        [errInfo setObject:url forKey:URLErrorKey];
     }
     
     return [NSError errorWithDomain:NSPOSIXErrorDomain code:posixErr userInfo:errInfo];
 }
 
-@implementation NSURL (SOExtendedAttributes)
+@implementation URL (SOExtendedAttributes)
 
 - (NSArray *) namesOfExtendedAttributesWithError:(NSError * __autoreleasing *)outError
 {
@@ -239,7 +239,7 @@ static inline NSError *SOPOSIXErrorForURL(NSURL *url)
         
         NSMutableDictionary *errInfo = [NSMutableDictionary dictionary];
         [errInfo setObject:NSLocalizedString(@"Failed to get one or more extended attribute values", @"Error message description for SOExtendedAttributesGetValueError") forKey:NSLocalizedDescriptionKey];
-        [errInfo setObject:self forKey:NSURLErrorKey];
+        [errInfo setObject:self forKey:URLErrorKey];
         [errInfo setObject:collectedErrors forKey:SOUnderlyingErrorsKey];
         *outError = [NSError errorWithDomain:SOExtendedAttributesErrorDomain code:SOExtendedAttributesGetValueError userInfo:errInfo];
     }
@@ -315,7 +315,7 @@ static inline NSError *SOPOSIXErrorForURL(NSURL *url)
             NSMutableDictionary *errInfo = [NSMutableDictionary dictionary];
             [errInfo setObject:NSLocalizedString(@"Failed to set one or more extended attributes.", @"Error message description for SOExtendedAttributesSetValueError.")
                         forKey:NSLocalizedDescriptionKey];
-            [errInfo setObject:self forKey:NSURLErrorKey];
+            [errInfo setObject:self forKey:URLErrorKey];
             [errInfo setObject:collectedErrors forKey:SOUnderlyingErrorsKey];
             *outError = [NSError errorWithDomain:SOExtendedAttributesErrorDomain code:SOExtendedAttributesSetValueError userInfo:errInfo];
         }

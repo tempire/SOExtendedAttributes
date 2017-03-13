@@ -54,7 +54,7 @@ enum {
     SOExtendedAttributesGetValueError,
 };
 
-@interface NSURL (SOExtendedAttributes)
+@interface URL (SOExtendedAttributes)
 
 /**
  Retrieves the extended attribute data with the given name.

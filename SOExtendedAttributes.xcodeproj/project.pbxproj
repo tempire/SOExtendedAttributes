@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F212A54E14CDC3D100B65EA9 /* NSURL+SOExtendedAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = F212A54D14CDC3D100B65EA9 /* NSURL+SOExtendedAttributes.m */; };
+		F212A54E14CDC3D100B65EA9 /* URL+SOExtendedAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = F212A54D14CDC3D100B65EA9 /* URL+SOExtendedAttributes.m */; };
 		F212A55114CDC58800B65EA9 /* SOExtendedAttributes_UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F212A55014CDC58800B65EA9 /* SOExtendedAttributes_UnitTests.m */; };
 		F212A55614CDC5B600B65EA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F212A55414CDC5B600B65EA9 /* InfoPlist.strings */; };
 		F2191C1814CE06AA004557C9 /* SOUsefulFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F2191C1614CE06AA004557C9 /* SOUsefulFunctions.m */; };
@@ -16,8 +16,8 @@
 /* Begin PBXFileReference section */
 		F212A53314CDC35900B65EA9 /* SOExtendedAttributes.UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOExtendedAttributes.UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F212A53614CDC35900B65EA9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		F212A54C14CDC3D100B65EA9 /* NSURL+SOExtendedAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+SOExtendedAttributes.h"; sourceTree = "<group>"; };
-		F212A54D14CDC3D100B65EA9 /* NSURL+SOExtendedAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+SOExtendedAttributes.m"; sourceTree = "<group>"; };
+		F212A54C14CDC3D100B65EA9 /* URL+SOExtendedAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "URL+SOExtendedAttributes.h"; sourceTree = "<group>"; };
+		F212A54D14CDC3D100B65EA9 /* URL+SOExtendedAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "URL+SOExtendedAttributes.m"; sourceTree = "<group>"; };
 		F212A55014CDC58800B65EA9 /* SOExtendedAttributes_UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOExtendedAttributes_UnitTests.m; path = UnitTests/SOExtendedAttributes_UnitTests.m; sourceTree = SOURCE_ROOT; };
 		F212A55214CDC5A900B65EA9 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "UnitTests-Info.plist"; path = "UnitTests/UnitTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F212A55314CDC5A900B65EA9 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UnitTests-Prefix.pch"; path = "UnitTests/UnitTests-Prefix.pch"; sourceTree = SOURCE_ROOT; };
@@ -45,8 +45,8 @@
 		F212A51F14CDC2D900B65EA9 = {
 			isa = PBXGroup;
 			children = (
-				F212A54C14CDC3D100B65EA9 /* NSURL+SOExtendedAttributes.h */,
-				F212A54D14CDC3D100B65EA9 /* NSURL+SOExtendedAttributes.m */,
+				F212A54C14CDC3D100B65EA9 /* URL+SOExtendedAttributes.h */,
+				F212A54D14CDC3D100B65EA9 /* URL+SOExtendedAttributes.m */,
 				F212A53E14CDC35900B65EA9 /* UnitTests */,
 				F212A55814CDC65900B65EA9 /* Documentation */,
 				F212A53514CDC35900B65EA9 /* Frameworks */,
@@ -191,7 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F212A54E14CDC3D100B65EA9 /* NSURL+SOExtendedAttributes.m in Sources */,
+				F212A54E14CDC3D100B65EA9 /* URL+SOExtendedAttributes.m in Sources */,
 				F212A55114CDC58800B65EA9 /* SOExtendedAttributes_UnitTests.m in Sources */,
 				F2191C1814CE06AA004557C9 /* SOUsefulFunctions.m in Sources */,
 			);
