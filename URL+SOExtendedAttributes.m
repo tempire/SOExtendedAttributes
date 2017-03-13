@@ -11,7 +11,7 @@
 #endif
 
 #import <Foundation/Foundation.h>
-#import "RL+SOExtendedAttributes.h"
+#import "URL+SOExtendedAttributes.h"
 #import <sys/xattr.h>
 #include <unistd.h>
 
